@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define column 4
+#define column 5
 void main()
 {
   int num=1,space,outerloop,innerloop;

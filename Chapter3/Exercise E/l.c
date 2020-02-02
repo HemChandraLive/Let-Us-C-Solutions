@@ -3,7 +3,7 @@
 
 double f(double);
 
-void main()
+int main()
 {
   int loop;
   double sum=0;
@@ -19,12 +19,13 @@ void main()
   }
   else
   {
-    pow(2,4);
+    pow(2.0,4.0);
     printf("%lf\n",xvalue);
     sum=sum+pow(loop,xvalue);
   }
   }
   printf("Answer = %lf\n",sum);
+  return 0;
 }
 
 double f(double x)
