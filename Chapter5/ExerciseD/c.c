@@ -1,52 +1,23 @@
 #include<stdio.h>
 void main()
 {
-int number,l;
+int number,l,i;
 printf("Enter the number\n");
 scanf("%d",&number);
-while (number>0) {
-  //printf("%d\n",number);
-  if(number>=1000)
+char ch[]={'M','D','C','L','X','V','I'};
+int num[]={1000,500,100,50,10,5,1};
+
+for(i=0;i<7;i++)
+{
+  if(number>=num[i])
   {
-    printf("M");
-    number%=1000;
-  }
-  else if(number>=500)
-  {
-    printf("D");
-    number%=500;
-  }
-  else if(number>=100)
-  {
-    printf("C");
-    number%=100;
-  }
-  else if(number>=50)
-  {
-    printf("L");
-    number%=50;
-  }
-  else if(number>=10)
-  {
-    l=number/10;
-    while (l>0) {
-      /* code */
-        printf("X");
-        l--;
+    l=number/num[i];
+    number=number%num[i];
+    while(l>0)
+    {
+      printf("%c",ch[i]);
+      l--;
     }
-
-    number%=10;
   }
-  else if(number>=5)
-  {
-    printf("V");
-    number%=5;
-  }
-  else if(number>=1)
-  {
-    printf("I");
-    number%=1;
-  }
-
 }
 }
